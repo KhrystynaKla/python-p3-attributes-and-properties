@@ -12,4 +12,12 @@ APPROVED_BREEDS = [
 ]
 
 class Dog:
-    pass
+    def __init__(self, breed='Pug', name='Matrix'):
+        if name=='' or type(name)!=str or len(name)>25:
+            print("Name must be string between 1 and 25 characters.")
+        else:
+            self.name=name
+        if breed not in APPROVED_BREEDS:
+            print('Breed must be in list of approved breeds.')
+        else:
+            self.breed=breed
